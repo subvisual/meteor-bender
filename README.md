@@ -59,4 +59,4 @@ Bender.go('trips.show', { _id: @id }, { animation: 'slideDown' })
 # License
 Bender is © 2014-2015 GB-Software As A Service, Lda.
 It is free software and may be redistributed under the terms specified in the
-[LICENSE](LICENSE.txt) file.
+[LICENSE](LICENSE) file.
