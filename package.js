@@ -1,8 +1,8 @@
 Package.describe({
   name: 'gabrielpoca:bender',
   summary: 'Page transitions with bender',
-  version: '0.0.3',
-  git: 'git@github.com:groupbuddies/meteor-blender.git'
+  version: '0.0.4',
+  git: 'https://github.com/groupbuddies/meteor-bender'
 });
 
 Package.onUse(function(api) {
