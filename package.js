@@ -21,4 +21,4 @@ Package.onUse(function(api) {
 
   api.export('Bender', 'client');
   api.export('IronBender', 'client');
-});
+}, 'METEOR@1');
