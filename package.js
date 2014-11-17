@@ -6,9 +6,11 @@ Package.describe({
 });
 
 Package.onUse(function(api) {
+  api.versionsFrom('METEOR@1');
+
   api.use([
     'coffeescript',
-    'percolate:velocityjs'
+    'percolate:velocityjs@1.0.0'
   ], 'client');
 
   api.addFiles([
@@ -21,4 +23,4 @@ Package.onUse(function(api) {
 
   api.export('Bender', 'client');
   api.export('IronBender', 'client');
-}, 'METEOR@1');
+});
