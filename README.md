@@ -53,8 +53,8 @@ Bender.go('trips.show', { _id: @id }, { animation: 'slideDown' })
 
 # Roadmap
 
-[ ] More transition animations
-[ ] Make bender more configurable (animation duration, easing, etc...)
+- [ ] More transition animations
+- [ ] Make bender more configurable (animation duration, easing, etc...)
 
 # License
 Bender is © 2014-2015 GB-Software As A Service, Lda.
