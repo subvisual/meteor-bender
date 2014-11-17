@@ -1,0 +1,19 @@
+html, body {
+  height: 100%;
+  width: 100%;
+}
+
+.layout {
+  height: 100%;
+  overflow: hidden;
+  width: 100%;
+}
+
+.page {
+  vertical-align: top;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}

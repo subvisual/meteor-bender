@@ -1,0 +1,31 @@
+<head>
+  <title>Bender</title>
+</head>
+
+<template name="layout">
+  <div class="layout" id="content-container">
+    {{> yield}}
+  </div>
+</template>
+
+<template name="firstPage">
+  <div class="page">
+    <h1>Hi. where do you wan't to go?</h1>
+    <button id="goLeft">Left</button>
+    <button id="goRight">Right</button>
+  </div>
+</template>
+
+<template name="leftPage">
+  <div class="page">
+    <h1>You're on the right</h1>
+    <button id="back">Go back</button>
+  </div>
+</template>
+
+<template name="rightPage">
+  <div class="page">
+    <h1>You're on the left</h1>
+    <button id="back">Go back</button>
+  </div>
+</template>
