@@ -18,7 +18,7 @@ meteor add gabrielpoca:bender
 
 To use Bender you need to initialize it with the page container as an argument.
 
-```
+```coffee
 Template.layout.rendered = ->
   Bender.initialize(@find('#content-container'))
 ```
@@ -28,7 +28,7 @@ Template.layout.rendered = ->
 By default Bender will have no animation after being initialized. You can change
 this by calling the `animate` function.
 
-```
+```coffee
 Bender.animate('slideRight')
 ```
 
@@ -37,7 +37,7 @@ It is also possible to use the
 `Router.go` use `Bender.go` and pass in the animation as an option. Everything
 else should work as expected with the `Iron.Router`.
 
-```
+```coffee
 Bender.go('trips.show', { _id: @id }, { animation: 'slideDown' })
 ```
 
