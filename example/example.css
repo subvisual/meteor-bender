@@ -7,7 +7,7 @@ html, body {
 
 .layout {
   height: 100%;
-  overflow: hidden;
+  /*overflow: hidden;*/
   width: 100%;
 }
 

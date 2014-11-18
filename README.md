@@ -18,9 +18,35 @@ meteor add gabrielpoca:bender
 
 To use Bender you need to initialize it with the page container as an argument.
 
-```coffee
-Template.layout.rendered = ->
-  Bender.initialize(@find('#content-container'))
+```js
+Template.layout.rendered = function() {
+  Bender.initialize(this.find('#content-container'));
+};
+```
+
+You also need some css to make the animations work. Most animations need your pages to use `position: absolute`. Here is some css to get you started. You can see the app on the example folder for more information.
+
+```css
+.layout {
+  height: 100%;
+  /* to prevent the scrollbars from showing during an animation */
+  overflow: hidden;
+  width: 100%;
+}
+
+.page {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  vertical-align: top;
+  width: 100%;
+}
+
+/* to make sure the page being animated is on top */
+.velocity-animating {
+  z-index: 99;
+}
 ```
 
 ## Animating elements
@@ -28,8 +54,8 @@ Template.layout.rendered = ->
 By default Bender will have no animation after being initialized. You can change
 this by calling the `animate` function.
 
-```coffee
-Bender.animate('slideRight')
+```js
+Bender.animate('slideRight');
 ```
 
 It is also possible to use with
@@ -37,8 +63,8 @@ It is also possible to use with
 `Router.go` use `Bender.go` and pass in the animation as an option. Everything
 else should work as expected with the `Iron.Router`.
 
-```coffee
-IronBender.go('trips.show', { _id: @id }, { animation: 'slideDown' })
+```js
+IronBender.go('trips.show', { _id: this.id }, { animation: 'slideDown' });
 ```
 
 ### List of available animations
