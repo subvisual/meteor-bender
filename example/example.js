@@ -21,10 +21,10 @@ if (Meteor.isClient) {
 
   Template.firstPage.events({
     'click #goRight': function() {
-      IronBender.go('/right', {}, { animation: 'slideRight' });
+      IronBender.go('/right', {}, { animation: 'slideOverUpClose' });
     },
     'click #goLeft': function() {
-      IronBender.go('/left', {}, { animation: 'slideLeft' });
+      IronBender.go('/left', {}, { animation: 'slideOverDownClose' });
     }
   });
 

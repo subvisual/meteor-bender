@@ -10,10 +10,15 @@ html, body {
 }
 
 .page {
+  background-color: white;
   vertical-align: top;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   width: 100%;
+}
+
+.velocity-animating {
+  z-index: 99;
 }
