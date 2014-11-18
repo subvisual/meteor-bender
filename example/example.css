@@ -2,6 +2,7 @@ html, body {
   height: 100%;
   width: 100%;
   font-family: 'Open Sans', sans-serif;
+  overflow: hidden;
 }
 
 .layout {
@@ -49,6 +50,33 @@ html, body {
   transform: translateY(-48%);
 }
 
+.page button {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+button {
+  background: none;
+  border: none;
+  text-decoration: underline;
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  outline: none;
+}
+
+button:hover {
+  color: #CCFFFF;
+}
+
 .velocity-animating {
   z-index: 99;
+}
+
+.bender {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  max-height: 30%;
+  z-index: 9999;
 }
