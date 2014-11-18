@@ -11,12 +11,20 @@ html, body {
 
 .page {
   background-color: white;
-  vertical-align: top;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
+  vertical-align: top;
   width: 100%;
+}
+
+.page-inside {
+  position: absolute;
+  text-align: center;
+  top: 50%;
+  width: 100%;
+  transform: translateY(-50%);
 }
 
 .velocity-animating {
