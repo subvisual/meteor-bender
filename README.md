@@ -1,6 +1,6 @@
 # Page transitions with Bender
 
-Bender is a package that empowers your application with page transitions.
+Bender is a package that empowers your application with page transitions. There is an example app and you can click [here](http://benderdemo.meteor.com/) to see it in action.
 
 ![bender](http://madeira.hccanet.org/project2/michels_p2/website%20pics/bender.jpg)
 
@@ -32,24 +32,24 @@ this by calling the `animate` function.
 Bender.animate('slideRight')
 ```
 
-It is also possible to use the
+It is also possible to use with
 [`Iron.Router`](http://eventedmind.github.io/iron-router/), but instead of
 `Router.go` use `Bender.go` and pass in the animation as an option. Everything
 else should work as expected with the `Iron.Router`.
 
 ```coffee
-Bender.go('trips.show', { _id: @id }, { animation: 'slideDown' })
+IronBender.go('trips.show', { _id: @id }, { animation: 'slideDown' })
 ```
 
 ### List of available animations
 
-|Name      |Description|
-|----------|-----------------------------|
-|slideDown |Slides the current page down |
-|slideUp   |Slides the current page up   |
-|slideLeft |Slides the current page left |
-|slideRight|Slides the current page right|
-|none      |Removes animations           |
+|Name          |Description|
+|--------------|------------------------------------------------|
+|slideLeft     |Slides the current page left                    |
+|slideRight    |Slides the current page right                   |
+|slideOverDown |Slides the new page over the current from bellow|
+|slideOverUp   |Slides the new page over the current from above |
+|none          |Removes animations                              |
 
 # Roadmap
 
