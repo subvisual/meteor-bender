@@ -1,5 +1,6 @@
 class Bender
-  @currentAnimation: 'none'
+  @animations: [SlideHorizontal, SlideOver, None, SlideOverClose]
+  @current: None
 
   @initialize: (@el) ->
     @el._uihooks =
@@ -7,24 +8,12 @@ class Bender
       removeElement: _.bind(@removeElement, this)
 
   @animate: (animation) =>
-    @currentAnimation = animation
+    item = _.find @animations, (item) =>
+      animation in item.animations
+    @current = new item(animation)
 
   @insertElement: (node, next) ->
-    if @currentAnimation in SlideHorizontal.animations
-      SlideHorizontal.insertElement(node, next, @currentAnimation)
-    else if @currentAnimation in SlideVertical.animations
-      SlideVertical.insertElement(node, next, @currentAnimation)
-    else if @currentAnimation in None.animations
-      None.insertElement(node, next)
-    else
-      throw new Error("#{@currentAnimation} animation doesn't exist!")
+    @current.insertElement(node, next)
 
   @removeElement: (node) ->
-    if @currentAnimation in SlideHorizontal.animations
-      SlideHorizontal.removeElement(node, @currentAnimation)
-    else if @currentAnimation in SlideVertical.animations
-      SlideVertical.removeElement(node)
-    else if @currentAnimation in None.animations
-      None.removeElement(node)
-    else
-      throw new Error("#{@currentAnimation} animation doesn't exist!")
+    @current.removeElement(node)

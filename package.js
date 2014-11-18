@@ -14,11 +14,12 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.addFiles([
-    'lib/bender.coffee',
     'lib/iron_blender.coffee',
     'lib/animations/none.coffee',
     'lib/animations/slide_horizontal.coffee',
-    'lib/animations/slide_vertical.coffee'
+    'lib/animations/slide_over.coffee',
+    'lib/animations/slide_over_close.coffee',
+    'lib/bender.coffee'
   ], 'client');
 
   api.export('Bender', 'client');

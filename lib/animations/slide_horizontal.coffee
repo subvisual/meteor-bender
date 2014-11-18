@@ -1,23 +1,25 @@
 class @SlideHorizontal
-  @ANIMATION_DURATION: 600
-  @INSERT_START = { slideLeft: '100%', slideRight: '-100%' }
-  @REMOVE_END = { slideLeft: '-100%', slideRight: '100%' }
+  @INSERT: { slideLeft: '100%', slideRight: '-100%' }
+  @REMOVE: { slideLeft: '-100%', slideRight: '100%' }
+  @animations: ['slideLeft', 'slideRight']
 
-  @animations = ['slideLeft', 'slideRight']
+  animationDuration: 600
 
-  @insertElement: (node, next, animation) =>
-    start = @INSERT_START[animation]
+  constructor: (@animation) ->
+
+  insertElement: (node, next) =>
+    start = @constructor.INSERT[@animation]
     $.Velocity.hook(node, 'translateX', start)
     $(node).insertBefore(next)
     $(node).velocity {translateX: [0, start]},
-      duration: @ANIMATION_DURATION,
+      duration: @animationDuration,
       easing: 'ease-in-out',
       queue: false
 
-  @removeElement: (node, animation) =>
-    end = @REMOVE_END[animation]
+  removeElement: (node) =>
+    end = @constructor.REMOVE[@animation]
     $(node).velocity {translateX: end},
-      duration: @ANIMATION_DURATION,
+      duration: @animationDuration,
       easing: 'ease-in-out',
       queue: false,
       complete: () ->
