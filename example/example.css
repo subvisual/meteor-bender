@@ -1,6 +1,7 @@
 html, body {
   height: 100%;
   width: 100%;
+  font-family: 'Open Sans', sans-serif;
 }
 
 .layout {
@@ -10,13 +11,34 @@ html, body {
 }
 
 .page {
-  background-color: white;
   height: 100%;
   left: 0;
   position: absolute;
   top: 0;
   vertical-align: top;
   width: 100%;
+  color: white;
+  background: linear-gradient(45deg, #8199AF 0%,#B8C3CE 75%,#E3EAED 100%);
+}
+
+.page.pink {
+  background: linear-gradient(45deg, #EA4C89 0px, #EE92C5 100%);
+}
+
+.page.green {
+  background: linear-gradient(45deg, #6EC06E 0px, #50CC7A 100%);
+}
+
+.page.orange {
+  background: linear-gradient(225deg, #F49756 0px, #ED7E58 100%);
+}
+
+.page.purple {
+  background: linear-gradient(225deg, #A094ED 0px, #B781D3 100%);
+}
+
+.page.blue {
+  background: linear-gradient(225deg, #2DC3E3 0px, #00A3E0 100%);
 }
 
 .page-inside {
@@ -24,7 +46,7 @@ html, body {
   text-align: center;
   top: 50%;
   width: 100%;
-  transform: translateY(-50%);
+  transform: translateY(-48%);
 }
 
 .velocity-animating {
