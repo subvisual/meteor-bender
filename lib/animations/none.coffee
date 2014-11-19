@@ -3,5 +3,6 @@ class @None
 
   insertElement: (node, next) =>
     $(node).insertBefore(next)
+
   removeElement: (node) =>
     $(node).remove()

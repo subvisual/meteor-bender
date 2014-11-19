@@ -3,6 +3,7 @@ class Bender
   @current: None
 
   @initialize: (@el) ->
+    @current = new None
     @el._uihooks =
       insertElement: _.bind(@insertElement, this)
       removeElement: _.bind(@removeElement, this)
