@@ -23,6 +23,10 @@ if (Meteor.isClient) {
     name: 'leftPage'
   });
 
+  Router.route('/cross_fade', {
+    name: 'crossFade'
+  });
+
   Template.layout.rendered = function() {
     Bender.initialize(this.find('#content-container'))
   };
@@ -39,6 +43,9 @@ if (Meteor.isClient) {
     },
     'click #overUp': function() {
       IronBender.go('/over_up', {}, { animation: 'slideOverUp' });
+    },
+    'click #crossFade': function() {
+      IronBender.go('/cross_fade', {}, { animation: 'fadeIn' });
     }
   });
 
@@ -63,6 +70,12 @@ if (Meteor.isClient) {
   Template.rightPage.events({
     'click #back': function() {
       IronBender.go('/', {}, { animation: 'slideRight' });
+    }
+  });
+
+  Template.crossFade.events({
+    'click #back': function() {
+      IronBender.go('/', {}, { animation: 'fadeOut' });
     }
   });
 }

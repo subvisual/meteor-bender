@@ -19,6 +19,7 @@ Package.onUse(function(api) {
     'lib/animations/slide_horizontal.coffee',
     'lib/animations/slide_over.coffee',
     'lib/animations/slide_over_close.coffee',
+    'lib/animations/cross_fade.coffee',
     'lib/bender.coffee'
   ], 'client');
 

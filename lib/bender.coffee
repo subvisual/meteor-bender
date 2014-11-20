@@ -1,5 +1,5 @@
 class Bender
-  @animations: [SlideHorizontal, SlideOver, None, SlideOverClose]
+  @animations: [SlideHorizontal, SlideOver, None, SlideOverClose, CrossFade]
   @current: None
 
   @initialize: (@el) ->
