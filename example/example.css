@@ -3,6 +3,9 @@ html, body {
   width: 100%;
   font-family: 'Open Sans', sans-serif;
   overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  overflow: hidden;
+   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .layout {
@@ -48,6 +51,7 @@ html, body {
   top: 50%;
   width: 100%;
   transform: translateY(-48%);
+  -webkit-transform: translateY(-48%);
 }
 
 .page button {
@@ -70,7 +74,7 @@ button:hover {
 }
 
 .velocity-animating {
-  z-index: 99;
+  z-index: 9;
 }
 
 .bender {
