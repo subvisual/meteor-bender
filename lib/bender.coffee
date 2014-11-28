@@ -18,3 +18,11 @@ class Bender
 
   @removeElement: (node) ->
     @current.removeElement(node)
+
+  @go: (routeNameOrPath, params, options) ->
+    if options && options.animation?
+      Bender.animate(options.animation)
+      delete options.animation
+
+    Router.go(routeNameOrPath, params, options)
+

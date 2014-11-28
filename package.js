@@ -1,7 +1,7 @@
 Package.describe({
   name: 'gabrielpoca:bender',
   summary: 'Page transitions with bender',
-  version: '0.1.6',
+  version: '0.1.7',
   git: 'https://github.com/groupbuddies/meteor-bender'
 });
 
@@ -14,7 +14,6 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.addFiles([
-    'lib/iron_blender.coffee',
     'lib/animations/none.coffee',
     'lib/animations/slide_horizontal.coffee',
     'lib/animations/slide_over.coffee',
@@ -24,5 +23,4 @@ Package.onUse(function(api) {
   ], 'client');
 
   api.export('Bender', 'client');
-  api.export('IronBender', 'client');
 });

@@ -64,7 +64,7 @@ It is also possible to use with
 else should work as expected with the `Iron.Router`.
 
 ```js
-IronBender.go('trips.show', { _id: this.id }, { animation: 'slideDown' });
+Bender.go('trips.show', { _id: this.id }, { animation: 'slideDown' });
 ```
 
 ### List of available animations
@@ -75,6 +75,8 @@ IronBender.go('trips.show', { _id: this.id }, { animation: 'slideDown' });
 |slideRight    |Slides the current page right                   |
 |slideOverDown |Slides the new page over the current from bellow|
 |slideOverUp   |Slides the new page over the current from above |
+|fadeIn        |Slides the new page over the current from above |
+|fadeOut       |Slides the new page over the current from above |
 |none          |Removes animations                              |
 
 # Roadmap
