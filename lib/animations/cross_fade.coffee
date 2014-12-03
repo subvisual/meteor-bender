@@ -1,4 +1,4 @@
-class @CrossFade
+class CrossFade
   @INSERT: { fadeIn: 1, fadeOut: 0 }
   @REMOVE: { fadeIn: 0, fadeOut: 1 }
   @animations: ['fadeIn', 'fadeOut']
@@ -23,3 +23,5 @@ class @CrossFade
       queue: false,
       complete: () ->
         $(node).remove()
+
+@Bender.animations.push CrossFade

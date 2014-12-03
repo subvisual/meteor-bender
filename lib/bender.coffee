@@ -1,9 +1,10 @@
-class Bender
-  @animations: [SlideHorizontal, SlideOver, None, SlideOverClose, CrossFade]
-  @current: None
+class @Bender
+  #@animations: [SlideHorizontal, SlideOver, None, SlideOverClose, CrossFade]
+  @animations: []
+  @current: null
 
   @initialize: (@el) ->
-    @current = new None
+    @current = new @animations[0]
     @el._uihooks =
       insertElement: _.bind(@insertElement, this)
       removeElement: _.bind(@removeElement, this)
@@ -25,4 +26,3 @@ class Bender
       delete options.animation
 
     Router.go(routeNameOrPath, params, options)
-

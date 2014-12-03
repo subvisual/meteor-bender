@@ -1,4 +1,4 @@
-class @SlideOver
+class SlideOver
   @INSERT = { slideOverUp: '100%', slideOverDown: '-100%' }
   @animations = ['slideOverUp', 'slideOverDown']
 
@@ -20,3 +20,5 @@ class @SlideOver
         $('.velocity-animating').promise().done =>
           $(node).remove()
       , @animationDuration
+
+@Bender.animations.push SlideOver

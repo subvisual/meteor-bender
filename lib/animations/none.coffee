@@ -1,4 +1,4 @@
-class @None
+class None
   @animations = ['none']
 
   insertElement: (node, next) =>
@@ -6,3 +6,5 @@ class @None
 
   removeElement: (node) =>
     $(node).remove()
+
+@Bender.animations.push None

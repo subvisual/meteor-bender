@@ -1,4 +1,4 @@
-class @SlideHorizontal
+class SlideHorizontal
   @INSERT: { slideLeft: '100%', slideRight: '-100%' }
   @REMOVE: { slideLeft: '-100%', slideRight: '100%' }
   @animations: ['slideLeft', 'slideRight']
@@ -24,3 +24,5 @@ class @SlideHorizontal
       queue: false,
       complete: () ->
         $(node).remove()
+
+@Bender.animations.push SlideHorizontal

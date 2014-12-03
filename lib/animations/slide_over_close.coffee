@@ -1,4 +1,4 @@
-class @SlideOverClose
+class SlideOverClose
   @REMOVE = { slideOverUpClose: '100%', slideOverDownClose: '-100%' }
   @animations = ['slideOverUpClose', 'slideOverDownClose']
 
@@ -17,3 +17,5 @@ class @SlideOverClose
       queue: false
       complete: ->
         $(node).remove()
+
+@Bender.animations.push SlideOverClose
