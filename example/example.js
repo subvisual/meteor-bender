@@ -33,49 +33,49 @@ if (Meteor.isClient) {
 
   Template.firstPage.events({
     'click #goRight': function() {
-      IronBender.go('/right', {}, { animation: 'slideLeft' });
+      Bender.go('/right', {}, { animation: 'slideLeft' });
     },
     'click #goLeft': function() {
-      IronBender.go('/left', {}, { animation: 'slideRight' });
+      Bender.go('/left', {}, { animation: 'slideRight' });
     },
     'click #overDown': function() {
-      IronBender.go('/over_down', {}, { animation: 'slideOverDown' });
+      Bender.go('/over_down', {}, { animation: 'slideOverDown' });
     },
     'click #overUp': function() {
-      IronBender.go('/over_up', {}, { animation: 'slideOverUp' });
+      Bender.go('/over_up', {}, { animation: 'slideOverUp' });
     },
     'click #crossFade': function() {
-      IronBender.go('/cross_fade', {}, { animation: 'fadeIn' });
+      Bender.go('/cross_fade', {}, { animation: 'fadeIn' });
     }
   });
 
   Template.overDown.events({
     'click #back': function() {
-      IronBender.go('/', {}, { animation: 'slideOverDownClose' });
+      Bender.go('/', {}, { animation: 'slideOverDownClose' });
     }
   });
 
   Template.overUp.events({
     'click #back': function() {
-      IronBender.go('/', {}, { animation: 'slideOverUpClose' });
+      Bender.go('/', {}, { animation: 'slideOverUpClose' });
     }
   });
 
   Template.leftPage.events({
     'click #back': function() {
-      IronBender.go('/', {}, { animation: 'slideLeft' });
+      Bender.go('/', {}, { animation: 'slideLeft' });
     }
   });
 
   Template.rightPage.events({
     'click #back': function() {
-      IronBender.go('/', {}, { animation: 'slideRight' });
+      Bender.go('/', {}, { animation: 'slideRight' });
     }
   });
 
   Template.crossFade.events({
     'click #back': function() {
-      IronBender.go('/', {}, { animation: 'fadeOut' });
+      Bender.go('/', {}, { animation: 'fadeOut' });
     }
   });
 }
