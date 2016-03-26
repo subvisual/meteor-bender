@@ -1,5 +1,7 @@
 # Page transitions with Bender
 
+**This package is deprectead, use [meteor-transitioner](https://github.com/ccorcos/meteor-transitioner) instead.**
+
 Bender is a package that empowers your application with page transitions. There is an example app and you can click [here](http://benderdemo.meteor.com/) to see it in action.
 
 ![bender](http://madeira.hccanet.org/project2/michels_p2/website%20pics/bender.jpg)
