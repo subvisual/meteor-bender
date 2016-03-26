@@ -1,6 +1,6 @@
-# Page transitions with Bender
+# [Deprecated] Page transitions with Bender
 
-**This package is deprectead, use [meteor-transitioner](https://github.com/ccorcos/meteor-transitioner) instead.**
+**This package is deprecated, use [meteor-transitioner](https://github.com/ccorcos/meteor-transitioner) instead.**
 
 Bender is a package that empowers your application with page transitions. There is an example app and you can click [here](http://benderdemo.meteor.com/) to see it in action.
 
